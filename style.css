@@ -1,0 +1,28 @@
+
+body{
+
+font-family: 'Open Sans', sans-serif;
+padding: 20px;
+
+}
+
+
+#button{
+
+    margin-bottom: 15px;
+}
+
+
+.far{
+    font-size: 20px;
+}
+
+#deletIcon{
+    cursor: pointer;
+}
+
+#app{
+    color:#28A745;
+    font-weight: bold;
+}
+

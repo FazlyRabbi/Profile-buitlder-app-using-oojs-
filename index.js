@@ -63,10 +63,9 @@ Ui.prototype.showAlert = function(massage,className){
 
 };
 
-document.querySelector("form").addEventListener("submit",e =>{
-
+document.querySelector("form").addEventListener("submit",(e) =>{
     e.preventDefault();
-
+    console.log(e.target)
    const name = document.querySelector("#name").value;
    const email = document.querySelector("#email").value;
    const proffesion = document.querySelector("#proffesion").value;
@@ -84,6 +83,10 @@ document.querySelector("form").addEventListener("submit",e =>{
      ui.clearField();
    
    }
+
+   
+  
+
    })
 
 

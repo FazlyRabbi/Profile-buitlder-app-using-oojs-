@@ -40,7 +40,14 @@ Ui.prototype.clearField = function(){
 //delet profile mathod.........
 Ui.prototype.deleteProfile = function(target){
 
-    target.parentElement.parentElement.remove();
+    if(target.id === "deletIcon"){
+        target.parentElement.parentElement.remove();
+        const id = target.parentElement.previousElementSibling.dataset.id;
+         
+        Store.deleteProfileFromeStore(id);
+       
+    }
+
 
 }
 
@@ -62,6 +69,8 @@ Ui.prototype.showAlert = function(massage,className){
   },2000);
 
 };
+
+
 
 document.querySelector("form").addEventListener("submit",(e) =>{
     e.preventDefault();
@@ -94,12 +103,12 @@ document.querySelector("form").addEventListener("submit",(e) =>{
    //Event delegation practical 
    document.querySelector("#profile-list").addEventListener("click",e=>{
   
-      if(e.target.id === "deletIcon"){
+
     
           const ui = new Ui();
           ui.deleteProfile(e.target);
           ui.showAlert("proifle is remove","success");
-      }
+      
     
      
    })
